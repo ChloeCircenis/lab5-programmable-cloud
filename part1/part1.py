@@ -4,11 +4,11 @@ import google.auth
 from google.api_core.exceptions import NotFound
 from google.cloud import compute_v1
 
-# ZONE = "us-west1-b"
-ZONE = "us-central1-a"
+ZONE = "us-west1-b"
+# ZONE = "us-central1-a"
 NAME = "lab5-flask"
-# MACHINE = "f1-micro"
-MACHINE = "e2-micro"
+MACHINE = "f1-micro"
+# MACHINE = "e2-micro"
 NETWORK = "global/networks/default"
 TAG = "allow-5000"
 

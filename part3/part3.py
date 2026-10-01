@@ -3,10 +3,12 @@
 import google.auth
 from google.cloud import compute_v1
 
-ZONE = "us-central1-a"
+# ZONE = "us-central1-a"
+ZONE = "us-west1-b"
 VM1 = "vm1"
 VM2 = "vm2"
-MACHINE = "e2-micro"
+# MACHINE = "e2-micro"
+MACHINE = "f1-micro"
 NETWORK = "global/networks/default"
 SERVICE_ACCOUNT = (
     "lab5-vm-launcher@datacenterscalecomputinglab5.iam.gserviceaccount.com"
@@ -56,7 +58,7 @@ with open("/srv/vm2-startup.sh") as f:
 
 vm = compute_v1.Instance(
     name="vm2",
-    machine_type="zones/us-central1-a/machineTypes/e2-micro",
+    machine_type="zones/us-west1-b/machineTypes/f1-micro",
     disks=[
         compute_v1.AttachedDisk(
             boot=True,
@@ -88,7 +90,7 @@ vm = compute_v1.Instance(
 
 instances.insert(
     project=project,
-    zone="us-central1-a",
+    zone="us-west1-b",
     instance_resource=vm
 ).result()
 

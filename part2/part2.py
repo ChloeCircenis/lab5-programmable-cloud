@@ -5,7 +5,8 @@ from google.cloud import compute_v1
 
 _, PROJECT = google.auth.default()
 
-ZONE = "us-central1-a"
+# ZONE = "us-central1-a"
+ZONE = "us-west1-b"
 INSTANCE = "lab5-flask"
 
 instances = compute_v1.InstancesClient()
